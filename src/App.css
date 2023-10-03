@@ -1,0 +1,878 @@
+/* global */
+* {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+}
+.mainContainer {
+  width: 100%;
+  display: grid;
+  background-color: antiquewhite;
+  text-align: center;
+  grid-template-areas: "box-1", "box-2", "box-3", "box-4", "box-5", "box-6",
+    "box-7", "box-8", "box-9", "box-10", "box-11", "box-12", "box-13";
+}
+
+/* -------------------------------------------------- */
+/* for box 1*/
+/* -------------------------------------------------- */
+/* make grid first box*/
+.mainContainer > .box-1 > div {
+  width: 100%;
+}
+.mainContainer > .box-1::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay to darken the image */
+}
+.mainContainer > .box-1::after {
+  content: "";
+  position: relative;
+  color: white;
+  filter: brightness(40%);
+  background-image: url("./images/coverImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+}
+/* grid for box1 */
+.mainContainer > .box-1 {
+  display: grid;
+  grid-template-areas: "nav", "heading-1", "heading-2", "para", "form", "proud";
+}
+/* grid for nav */
+.mainContainer > .box-1 > div {
+  position: absolute;
+  z-index: 1;
+  color: #fff; /* Text color on the darkened background */
+}
+.mainContainer > .box-1 > div > .nav {
+  display: grid;
+  grid-template-areas: "name flex-1 flex-2";
+}
+/* ................................................... */
+/* for name */
+.mainContainer > .box-1 > div > .nav > .name > img {
+  width: 150px;
+  padding: 10px;
+}
+/* .............................................. */
+/* grid for flex1 */
+.mainContainer > .box-1 > div > .nav > .flex-1 {
+  display: grid;
+  grid-template-areas: "media downArrow newRoom company";
+}
+/* padding because it help to stay parrallel to buttons on right */
+.mainContainer > .box-1 > div > .nav > .flex-1 > div {
+  padding: 10px;
+}
+/* set style for down arrow buttons */
+.mainContainer > .box-1 > div > .nav > .flex-1 > .downArrow > img {
+  width: 13px;
+  margin-left: 6px;
+}
+/* set style for sqaue arrow box img */
+.mainContainer > .box-1 > div > .nav > .flex-1 > .newRoom > .img > img {
+  width: 25px;
+}
+/* flex row for newRoom */
+.mainContainer > .box-1 > div > .nav > .flex-1 > .newRoom {
+  display: flex;
+}
+/* margin foe newRoom img */
+.mainContainer > .box-1 > div > .nav > .flex-1 > .newRoom > .img {
+  margin-left: 10px;
+}
+/* .............................................................. */
+/* grid flex2 */
+.mainContainer > .box-1 > div > .nav > .flex-2 {
+  display: grid;
+  grid-template-areas: "signInButton getStartedButton";
+}
+.mainContainer > .box-1 > div > .nav > .flex-2 > div {
+  padding: 10px;
+}
+.mainContainer > .box-1 > div > .nav > .flex-2 > .getStartedButton {
+  color: white;
+  background-color: red;
+  height: 20px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.mainContainer > .box-1 > div > .nav > .flex-1,
+.flex-2 {
+  padding: 30px;
+}
+/* ..................................... */
+/* heading1 heading2*/
+.mainContainer > .box-1 > div > .heading-1 {
+  margin-top: 100px;
+}
+.mainContainer > .box-1 > div > .heading-1,
+.heading-2 {
+  text-align: left;
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 0 0 0 6%;
+}
+/* ..................................... */
+/* para*/
+.mainContainer > .box-1 > div > .para {
+  width: 45%;
+  padding: 0 0 0 6%;
+  margin-top: 40px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 23px;
+}
+/* ..................................... */
+/* form*/
+.mainContainer > .box-1 > div > .form {
+  display: flex;
+  padding: 0 0 0 6%;
+  margin-top: 40px;
+}
+.mainContainer > .box-1 > div > .form > form > input {
+  padding: 10px 110px 10px 20px;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.mainContainer > .box-1 > div > .form > form > input::placeholder {
+  color: white;
+}
+.mainContainer > .box-1 > div > .form > button {
+  margin-left: 10px;
+  padding: 10px 25px;
+  color: white;
+  background-color: red;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+/* ..................................... */
+/* proud */
+.mainContainer > .box-1 > div > .proud {
+  display: flex;
+  padding: 30px 0 0 6%;
+  align-items: center;
+}
+/* set slah images */
+.mainContainer > .box-1 > div > .proud > .three > .flex-columb > img {
+  width: 15px;
+  display: block;
+}
+/* style one */
+.mainContainer > .box-1 > div > .proud > .one {
+  font-size: 35px;
+  margin-right: 15px;
+}
+/* style two */
+.mainContainer > .box-1 > div > .proud > .two {
+  font-size: 15px;
+  text-align: left;
+  line-height: 25px;
+  margin-right: 15px;
+}
+.mainContainer > .box-1 > div > .proud > .three {
+  margin-right: 15px;
+}
+.mainContainer > .box-1 > div > .proud > .four {
+  font-size: 35px;
+  margin-right: 15px;
+}
+.mainContainer > .box-1 > div > .proud > .five {
+  font-size: 15px;
+  text-align: left;
+  line-height: 25px;
+  margin-right: 15px;
+}
+/* -------------------------------------------------- */
+/* for box 2*/
+/* -------------------------------------------------- */
+/* make grid first box*/
+.mainContainer > .box-2 {
+  display: grid;
+  grid-template-areas: "A", "B";
+  background-color: #000000;
+  color: #fcfafa;
+  grid-gap: 50px;
+  height: 130px;
+}
+/* set styles in .A */
+.mainContainer > .box-2 > .A {
+  font-size: 35px;
+  font-weight: 600;
+}
+/* make gridrow of second part of box-1 */
+.mainContainer > .box-2 > .B {
+  display: grid;
+  grid-template-areas: "apple googlePlay roku fireTv androidTv chromecast";
+  /* grid-template-columns: 200px 200px 200px 200px 200px 200px; */
+  align-items: center;
+}
+/* set img styles in .B */
+.mainContainer > .box-2 > .B > div > .img > img {
+  width: 50px;
+}
+/* make all divs flex */
+.mainContainer > .box-2 > .B > div {
+  display: grid;
+  grid-template-areas: "img appName";
+  align-items: center;
+  max-width: 400px;
+}
+/* padding to apple div */
+.mainContainer > .box-2 {
+  padding: 100px;
+}
+/* make firetv size */
+.mainContainer > .box-2 > .B > .fireTv > img {
+  width: 100px;
+}
+/* SET style of roku */
+.mainContainer > .box-2 > .B > .roku {
+  font-size: 60px;
+  font-weight: bolder;
+}
+/* SET style of androidtv */
+.mainContainer > .box-2 > .B > .androidtv {
+  font-size: 40px;
+}
+/* -------------------------------------------------- */
+/* for box 3*/
+/* -------------------------------------------------- */
+.mainContainer > .box-3 {
+  display: grid;
+  grid-template-areas: "img text";
+  padding: 65px;
+  align-items: center;
+  background-color: #000000;
+  color: #fcfafa;
+}
+/* for all divs in .text which is the second part of box-3 */
+.mainContainer > .box-3 > .text > div {
+  padding: 20px;
+  text-align: left;
+}
+.mainContainer > .box-3 > .text > .A {
+  font-size: 35px;
+  font-weight: 600;
+}
+.mainContainer > .box-3 > .text > .B {
+  font-size: 12px;
+  line-height: 20px;
+}
+.mainContainer > .box-3 > .text > .C {
+  display: grid;
+  grid-template-areas: "text img";
+  grid-gap: 10px;
+  float: left;
+}
+.mainContainer > .box-3 > .text > .C > .img > img {
+  width: 20px;
+}
+/* -------------------------------------------------- */
+/* for box 4*/
+/* -------------------------------------------------- */
+.mainContainer > .box-4 {
+  display: grid;
+  grid-template-areas: "A B";
+  background-color: #000000;
+  color: white;
+  align-items: center;
+  text-align: left;
+  padding: 65px;
+}
+.mainContainer > .box-4 > .A > .big {
+  font-size: 35px;
+  font-weight: 600;
+}
+.mainContainer > .box-4 > .A > .small {
+  font-size: 12px;
+  max-width: 84%;
+  margin-top: 20px;
+  line-height: 20px;
+}
+/* -------------------------------------------------- */
+/* for box 5*/
+/* -------------------------------------------------- */
+.mainContainer > .box-5 {
+  display: grid;
+  grid-template-areas: "img text";
+  background-color: #000000;
+  color: #fcfafa;
+  align-items: center;
+  text-align: left;
+  padding: 65px;
+}
+.mainContainer > .box-5 > .text > .large {
+  font-size: 35px;
+  font-weight: 600;
+}
+.mainContainer > .box-5 > .text > .small {
+  font-size: 12px;
+  max-width: 90%;
+  margin-top: 20px;
+  line-height: 20px;
+}
+/* -------------------------------------------------- */
+/* for box 6*/
+/* -------------------------------------------------- */
+.mainContainer > .box-6 {
+  color: #fcfafa;
+  background-color: #000000;
+}
+.mainContainer > .box-6 > .large {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 22% 0 22%;
+}
+.mainContainer > .box-6 > .small {
+  font-size: 12px;
+  margin: 0 27% 0 27%;
+  margin-top: 20px;
+  line-height: 20px;
+}
+/* -------------------------------------------------- */
+/* for box 7*/
+/* -------------------------------------------------- */
+.mainContainer > .box-7 {
+  color: #fcfafa;
+  background-color: #000000;
+  padding: 100px 65px 0 65px;
+}
+.mainContainer > .box-7 > .header {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+}
+.mainContainer > .box-7 > .header > .A > .two {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.mainContainer > .box-7 > .movieList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.mainContainer > .box-7 > .movieList > div {
+  padding: 50px 0 0 0;
+}
+.mainContainer > .box-7 > .movieList > div > .title {
+  margin-top: 20px;
+}
+/* -------------------------------------------------- */
+/* for box 8*/
+/* -------------------------------------------------- */
+.mainContainer > .box-8 {
+  color: #fcfafa;
+  background-color: #000000;
+  padding: 100px 65px 0 65px;
+}
+.mainContainer > .box-8 > .header {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+}
+.mainContainer > .box-8 > .header > .A > .two {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.mainContainer > .box-8 > .movieList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.mainContainer > .box-8 > .movieList > div {
+  padding: 50px 0 0 0;
+}
+.mainContainer > .box-8 > .movieList > div > .title {
+  margin-top: 20px;
+}
+/* -------------------------------------------------- */
+/* for box 9*/
+/* -------------------------------------------------- */
+.mainContainer > .box-9 {
+  color: #fcfafa;
+  background-color: #000000;
+  padding: 100px 65px 0 65px;
+}
+.mainContainer > .box-9 > .header {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+}
+.mainContainer > .box-9 > .header > .A > .two {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.mainContainer > .box-9 > .movieList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.mainContainer > .box-9 > .movieList > div {
+  padding: 50px 0 0 0;
+}
+.mainContainer > .box-9 > .movieList > div > .title {
+  margin-top: 20px;
+}
+/* -------------------------------------------------- */
+/* for box 10*/
+/* -------------------------------------------------- */
+.mainContainer > .box-10 {
+  color: #fcfafa;
+  background-color: #000000;
+  padding: 100px 0 0 0;
+}
+.mainContainer > .box-10 > .large {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0px 22% 0 22%;
+}
+.mainContainer > .box-10 > .small {
+  font-size: 14.4px;
+  margin: 0 27% 0 27%;
+  margin: 20px 0 70px 0;
+  line-height: 20px;
+}
+/* -------------------------------------------------- */
+/* for box 11*/
+/* -------------------------------------------------- */
+.mainContainer > .box-11 {
+  background-color: black;
+  padding: 65px;
+  display: grid;
+  grid-template-areas: "A B C D";
+  justify-content: space-between;
+}
+.mainContainer > .box-11 > div {
+  background-color: #fcfafa;
+  color: black;
+  width: 260px;
+  height: 550px;
+  text-align: left;
+  padding: 15px;
+}
+.mainContainer > .box-11 > div > .A {
+  font-weight: 700;
+  padding: 20px 0 20px 0;
+}
+.mainContainer > .box-11 > div > .B {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.mainContainer > .box-11 > div > .B > .one {
+  font-size: 50px;
+}
+.mainContainer > .box-11 > div > .B > .two,
+.three {
+  margin-left: 5px;
+}
+.mainContainer > .box-11 > div > .C {
+  background-color: red;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.mainContainer > .box-11 > div > .flex {
+  display: flex;
+  font-size: 15px;
+  padding: 5px 0 0 0;
+}
+.mainContainer > .box-11 > div > .flex > .one {
+  width: 30px; /* You can adjust the width and height as needed */
+  height: 30px;
+  background-color: rgb(
+    255,
+    214,
+    221
+  ); /* Change the background color as desired */
+  color: red;
+  border-radius: 50%; /* This creates the circular shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainContainer > .box-11 > div > .flex > .two {
+  width: 200px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  line-height: 23px;
+}
+/* one bax needs distinct style so i do that */
+.mainContainer > .box-11 > .red {
+  background-color: red;
+  color: #fcfafa;
+}
+.mainContainer > .box-11 > .red > .C {
+  background-color: #fcfafa;
+  color: red;
+}
+/* -------------------------------------------------- */
+/* for box 12*/
+/* -------------------------------------------------- */
+.mainContainer > .box-12 {
+  background-color: black;
+  color: #fcfafa;
+  align-items: center;
+  font-size: 20px;
+}
+.mainContainer > .box-12 > .large {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 50px 28% 0 28%;
+  line-height: 55px;
+}
+.mainContainer > .box-12 > .small {
+  font-size: 14.4px;
+  margin: 20px 21.5% 0 21.5%;
+  line-height: 30px;
+}
+.mainContainer > .box-12 > .questions {
+  text-align: left;
+  width: 60%;
+  padding: 0 20% 0 20%;
+}
+/* SET FLEX */
+.mainContainer > .box-12 > .questions > div > div {
+  display: flex;
+  justify-content: space-between;
+  line-height: 70px;
+}
+/* SET HR WIDTH */
+.mainContainer > .box-12 > .questions > div > .hr > hr {
+  width: 100%;
+}
+/* make circle on line */
+.mainContainer > .box-12 > .questions > div > div > button {
+  margin-top: 27px;
+  border-radius: 100px;
+  border: 2px solid white;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  text-align: center;
+  color: #fcfafa;
+  font-weight: bolder;
+  font-size: 13px;
+  padding: 0;
+}
+/* remove last hr */
+.mainContainer > .box-12 > .questions > div:last-child > .hr {
+  display: none;
+}
+/* -------------------------------------------------- */
+/* for box 13*/
+/* -------------------------------------------------- */
+.mainContainer > .box-13 {
+  display: grid;
+  grid-template-areas: "A B C D E";
+  /* grid-template-columns:auto; */
+  background-color: #000000;
+  color: #fcfafa;
+  align-items: top;
+  padding: 10% 4% 5% 10%;
+  text-align: left;
+  font-size: 15px;
+  line-height: 40px;
+}
+/* margin zero net Flix logo in footer */
+.mainContainer > .box-13 > div:first-child > .A {
+  margin: 0;
+}
+
+.mainContainer > .box-13 > div > .A {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 13px;
+}
+.mainContainer > .box-13 > .A > .A > img {
+  width: 150px;
+}
+
+.mainContainer > .box-13 > .A > .D {
+  display: flex;
+  align-items: center;
+}
+.mainContainer > .box-13 > .A > .D > .B {
+  margin-left: 20px;
+}
+.mainContainer > .box-13 > .A > .D > .C {
+  margin-left: 20px;
+}
+
+/* .................................................. */
+/* media query for middle screen */
+/* .................................................. */
+@media only screen and (max-width: 1300px) {
+  /* ........................................... */
+  /* box1 */
+  /* ............................................ */
+  .mainContainer > .box-1 > div > .nav > .flex-1 {
+    font-size: 12px;
+  }
+  .mainContainer > .box-1 > div > .nav > .flex-2 {
+    font-size: 12px;
+  }
+  /* ........................................... */
+  /* box2 */
+  /* ............................................ */
+  .mainContainer > .box-2 > .B > div > .img > img {
+    width: 20px;
+  }
+  .mainContainer > .box-2 > .B > .fireTv > img {
+    width: 50px;
+  }
+  .mainContainer > .box-2 > .B > .roku {
+    font-size: 30px;
+  }
+  .mainContainer > .box-2 > .B > .androidtv {
+    font-size: 30px;
+  }
+  /* ........................................... */
+  /* box3 */
+  /* ............................................ */
+  .mainContainer > .box-3 > .img > img {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 1315px) {
+  /* ........................................... */
+  /* box7*/
+  /* ............................................ */
+  .mainContainer > .box-7 {
+    height: 950px;
+  }
+  .mainContainer > .box-7 > .movieList {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* ........................................... */
+  /* box8*/
+  /* ............................................ */
+  .mainContainer > .box-8 {
+    height: 950px;
+  }
+  .mainContainer > .box-8 > .movieList {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* ........................................... */
+  /* box9*/
+  /* ............................................ */
+  .mainContainer > .box-9 {
+    height: 950px;
+  }
+  .mainContainer > .box-9 > .movieList {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* ........................................... */
+  /* box11*/
+  /* ............................................ */
+  .mainContainer > .box-11 {
+    height: 1500px;
+    grid-template-areas: "A B" "C D";
+  }
+  /* ........................................... */
+  /* box13*/
+  /* ............................................ */
+  .mainContainer > .box-13 {
+    /* height: 1500px; */
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  /* ........................................... */
+  /* box1*/
+  /* ............................................ */
+
+  .mainContainer > .box-1 > div > .nav > .flex-1 {
+    display: none;
+  }
+  .mainContainer > .box-1 > div > .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mainContainer > .box-1 > div > .heading-1 {
+    font-size: 20px;
+  }
+  .mainContainer > .box-1 > div > .heading-2 {
+    font-size: 20px;
+  }
+  .mainContainer > .box-1 > div > .form > form > input {
+    width: 50px;
+  }
+  .mainContainer > .box-1 > div > .proud > div {
+    padding: 0;
+  }
+  .mainContainer > .box-1 > div > .proud {
+    display: grid;
+    grid-template-areas: "one two", "four five";
+  }
+  .mainContainer > .box-1 > div > .proud > .three {
+    display: none;
+  }
+  /* ........................................... */
+  /* box2*/
+  /* ............................................ */
+  .mainContainer > .box-2 {
+    padding: 15px;
+  }
+  .mainContainer > .box-2 > .A {
+    font-size: 20px;
+  }
+  .mainContainer > .box-2 > .B {
+    grid-template-areas: "apple googlePlay roku" "fireTv androidTv chromecast";
+  }
+  .mainContainer > .box-2 > .B > div > .img > img {
+    width: 10px;
+  }
+  .mainContainer > .box-2 > .B > .fireTv > img {
+    width: 30px;
+  }
+  .mainContainer > .box-2 > .B > .roku {
+    font-size: 20px;
+  }
+  .mainContainer > .box-2 > .B > .androidtv {
+    font-size: 20px;
+  }
+  /* ........................................... */
+  /* box3*/
+  /* ............................................ */
+  .mainContainer > .box-3 {
+    display: none;
+  }
+  /* ........................................... */
+  /* box4*/
+  /* ............................................ */
+  .mainContainer > .box-4 {
+    display: none;
+  }
+  /* ........................................... */
+  /* box5*/
+  /* ............................................ */
+  .mainContainer > .box-5 {
+    display: none;
+  }
+  /* ........................................... */
+  /* box6*/
+  /* ............................................ */
+  .mainContainer > .box-6 > .large {
+    font-size: 20px;
+    padding: 10px;
+    text-align: left;
+  }
+  .mainContainer > .box-6 > .small {
+    font-size: 10px;
+    text-align: left;
+  }
+  /* ........................................... */
+  /* box7*/
+  /* ............................................ */
+  .mainContainer > .box-7 {
+    height: 680px;
+  }
+  .mainContainer > .box-7 > .header > .A {
+    font-size: 10px;
+  }
+  .mainContainer > .box-7 > .movieList > div > div > img {
+    width: 120px;
+  }
+  /* ........................................... */
+  /* box8*/
+  /* ............................................ */
+  .mainContainer > .box-8 {
+    height: 680px;
+  }
+  .mainContainer > .box-8 > .header > .A {
+    font-size: 10px;
+  }
+  .mainContainer > .box-8 > .movieList > div > div > img {
+    width: 120px;
+  }
+  /* ........................................... */
+  /* box9*/
+  /* ............................................ */
+  .mainContainer > .box-9 {
+    height: 680px;
+  }
+  .mainContainer > .box-9 > .header > .A {
+    font-size: 10px;
+  }
+  .mainContainer > .box-9 > .movieList > div > div > img {
+    width: 120px;
+  }
+  /* ........................................... */
+  /* box10*/
+  /* ............................................ */
+  .mainContainer > .box-10 {
+    text-align: left;
+  }
+  .mainContainer > .box-10 > .small {
+    text-align: center;
+  }
+  /* ........................................... */
+  /* box11*/
+  /* ............................................ */
+  .mainContainer > .box-11 {
+    height: 3000px;
+    grid-template-areas: "A" "B" "C" "D";
+  }
+  .mainContainer > .box-11 > div {
+    width: 230px;
+    height: 600px;
+  }
+  .mainContainer > .box-11 > .A {
+    height: 500px;
+  }
+  /* ........................................... */
+  /* box12*/
+  /* ............................................ */
+  .mainContainer > .box-12 > .large {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+  }
+  .mainContainer > .box-12 > .small {
+    font-size: 15px;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  /* ........................................... */
+  /* box13*/
+  /* ............................................ */
+  .mainContainer > .box-13 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .mainContainer > .box-13 > .B {
+    display: none;
+  }
+  .mainContainer > .box-13 > .C {
+    display: none;
+  }
+  .mainContainer > .box-13 > .D {
+    display: none;
+  }
+}
